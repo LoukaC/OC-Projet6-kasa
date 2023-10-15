@@ -1,11 +1,14 @@
 import React from 'react'
 import './Appartment.scss'
+import { Link } from 'react-router-dom'
 
 function Appartment() {
   return (
+    <Link to="/logement">
     <div className="appartment">
       <h2> Titre de la location</h2>
     </div>
+    </Link>
   )
 }
 
