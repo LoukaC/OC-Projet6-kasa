@@ -1,0 +1,29 @@
+
+.errorBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #FF6060;
+}
+
+.error404{
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 410.69px;
+}
+
+.errorNav{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25.67px;
+    margin: 100px 20px;
+
+    a {
+      color: #FF6060;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 34.22px;
+   }
+}

@@ -1,0 +1,53 @@
+.barInfo{
+    margin: 30px;
+
+    
+    .topBar{
+        background-color: #FF6060;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        height: 52px;
+    
+    
+
+        h2{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25.67px;
+            margin: 20px;
+        }
+
+        .chevronUp{
+            display: none;
+         }
+
+        .chevronDown{
+            display: block;
+        }
+
+        i{
+            margin: 20px;
+        }
+    }
+
+
+    p{
+        background-color: #F6F6F6;
+        color: #FF6060;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25.67px;
+        max-height: 0;
+        overflow: hidden;
+        
+
+        &.expanded {
+            max-height: 1000px; /* ou toute autre valeur appropriée */
+            transition: max-height 2s ease; /* Ajout de la transition uniquement pour l'expansion */
+        }
+    }
+
+}
