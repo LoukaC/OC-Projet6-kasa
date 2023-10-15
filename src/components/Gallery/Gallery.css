@@ -1,0 +1,9 @@
+.gallery{
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 40px;
+    border-radius: 20px;
+
+}
