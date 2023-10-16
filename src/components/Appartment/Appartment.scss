@@ -1,18 +1,23 @@
-.appartment{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), #FF6060);
-    border-radius: 20px;
-    height: 340px;
-    width: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-}
 
-h2{
-    margin-left: 20px;
-    width: 120px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.67px;
+  a {
+        text-decoration: none;
+
+        .appartment{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), #FF6060);
+        border-radius: 20px;
+        height: 340px;
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: white;
+        
+        h2{
+            margin-left: 20px;
+            width: 120px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.67px;
+        }
+    } 
 }
