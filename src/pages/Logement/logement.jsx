@@ -6,26 +6,22 @@ import { useParams } from 'react-router-dom'
 import LogementInfo from '../../components/LogementInfo/LogementInfo'
 import LogementOwner from '../../components/LogementOwner/LogementOwner'
 
+
 function Logement() {
-
-  const { id } = useParams()
+  const { id } = useParams() // Récupère l'ID de l'appartement à partir des paramètres d'URL
   console.log(id)
+  const [apartment, setApartment] = useState({}) // Déclare l'état pour stocker les informations de l'appartement
 
-     const [apartments, setApartments] = useState([])
-     // Utilisation de useState pour initialiser le state 'apartments' à un tableau vide
-
-     useEffect(fecthApartments, [id])
-     // Utilisation de useEffect pour effectuer une requête de données au chargement du composant
-     //useEffect avec une array vide exécute la fonction au chargement du composant
-
-     function fecthApartments() {
-       fetch('DataBase.json')
-         .then((res) => res.json())
-         .then((res) => console.log(res))
-         .then((res) => setApartments(res))
-         .catch(console.error)
-        
-     }
+  useEffect(() => {
+    // Utilise useEffect pour effectuer une requête de données au chargement du composant ou à chaque changement de l'ID
+    fetch('DataBase.json') // Utilise fetch pour récupérer les données à partir du fichier JSON
+      .then((res) => res.json())
+      .then((data) => {
+        const selectedApartment = data.find((apartment) => apartment.id === id) // Recherche l'appartement correspondant à l'ID dans les données récupérées
+        setApartment(selectedApartment) // Met à jour l'état 'apartment' avec les informations de l'appartement trouvé
+      })
+      .catch((error) => console.error('Error fetch:', error))
+  }, [id]) // Utilise l'ID comme dépendance pour que useEffect se déclenche à chaque changement de l'ID
 
   return (
     <div className="logement">
@@ -34,7 +30,11 @@ function Logement() {
       </div>
       <div className="logementInfoOWner">
         <div className="logementInfo">
-          <LogementInfo title="titre" location="location" tags="[tag1]"/>
+          <LogementInfo
+            title={apartment.title}
+            location="location"
+            tags="[tag1]"
+          />
         </div>
         <div className="logementOwner">
           <LogementOwner name="nom" picture="" />
