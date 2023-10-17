@@ -1,0 +1,29 @@
+.carrousel{
+
+    position: relative;
+    color: white;
+
+    .chevron{
+
+        .fa-chevron-left{
+            position: absolute;
+            top: 200px;
+            left: 20px;
+    
+        }
+
+        .fa-chevron-right{
+            position: absolute;
+            top: 200px;
+            left: 180px;
+        }
+
+    }
+
+    .count{
+        position: absolute;
+        top: 460px;
+        left: 450px;
+    }
+
+}

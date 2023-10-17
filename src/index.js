@@ -17,12 +17,12 @@ root.render(
     <Router>
       <Header />
       <Routes>
-          <Route path="/" element={<Home /> } />
-          <Route path="/apropos" element={<Apropos />} />
-          <Route path="/logement" element={<Logement />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-        <Footer/>
+        <Route path="/" element={<Home /> } />
+        <Route path="/apropos" element={<Apropos />} />
+        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer/>
     </Router>
   </React.StrictMode>
 );

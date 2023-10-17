@@ -1,0 +1,21 @@
+
+.logementOwner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+
+    .Owner{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+
+    .ratingOwner{
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+    }
+}

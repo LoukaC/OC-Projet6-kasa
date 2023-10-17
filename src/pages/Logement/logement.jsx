@@ -1,30 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './logement.scss'
 import Carrousel from '../../components/Carrousel/Carrousel'
 import BarInfo from '../../components/BarInfo/BarInfo'
+import { useParams } from 'react-router-dom'
+import LogementInfo from '../../components/LogementInfo/LogementInfo'
+import LogementOwner from '../../components/LogementOwner/LogementOwner'
 
 function Logement() {
+  
+
+     const [apartments, setApartments] = useState([])
+     // Utilisation de useState pour initialiser le state 'apartments' à un tableau vide
+
+     useEffect(fecthApartments, [])
+     // Utilisation de useEffect pour effectuer une requête de données au chargement du composant
+     //useEffect avec une array vide exécute la fonction au chargement du composant
+
+     function fecthApartments() {
+       fetch('DataBase.json')
+         .then((res) => res.json())
+         .then((res) => console.log(res))
+         .then((res) => setApartments(res))
+         .catch(console.error)
+        
+     }
+
   return (
     <div className="logement">
       <div>
         <Carrousel />
       </div>
-      <div className="logementInfo">
-        <h3>Title-logement</h3>
-        <h4>location</h4>
-        <p>keyword</p>
-        <p>keyword</p>
-        <p>keyword</p>
+      <div className="logementInfoOWner">
+        <div className="logementInfo">
+          <LogementInfo />
+        </div>
+        <div className="logementOwner">
+          <LogementOwner />
+        </div>
       </div>
-      <div className="logementOwner">
-        <h3>owner</h3>
-        <img src="https://picsum.photos/100/100" alt="" />
-        <p>rating</p>
-      </div>
-
       <div className="logementBarInfo">
-        <BarInfo />
-        <BarInfo />
+        <div className="barWidth">
+          <BarInfo
+            title="Description"
+            paragraph="zqsdqfdqfffqlllllllllllllllllllllllllllffqssfdfdsfdsf"
+          />
+        </div>
+        <div className="barWidth">
+          <BarInfo title="Equipements" paragraph="zqllffqssfdfdsfdsf" />
+        </div>
       </div>
     </div>
   )

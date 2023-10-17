@@ -1,6 +1,4 @@
 .barInfo{
-    margin: 30px;
-
     
     .topBar{
         background-color: #FF6060;
@@ -10,9 +8,7 @@
         align-items: center;
         border-radius: 5px;
         height: 52px;
-    
-    
-
+        
         h2{
             font-weight: 500;
             font-size: 18px;
@@ -42,7 +38,6 @@
         line-height: 25.67px;
         max-height: 0;
         overflow: hidden;
-        
 
         &.expanded {
             max-height: 1000px; /* ou toute autre valeur appropriée */

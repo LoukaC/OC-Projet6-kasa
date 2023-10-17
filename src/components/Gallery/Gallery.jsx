@@ -24,7 +24,11 @@ function Gallery() {
   return (
     <div className="gallery">
       {apartments.map((apartment) => (
-        <Appartment title={apartment.title} image={apartment.cover} />
+        <Appartment
+          title={apartment.title}
+          image={apartment.cover}
+          id={apartment.id}
+        />
       ))}
     </div>
   )
