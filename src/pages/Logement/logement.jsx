@@ -14,7 +14,7 @@ function Logement() {
      const [apartments, setApartments] = useState([])
      // Utilisation de useState pour initialiser le state 'apartments' à un tableau vide
 
-     useEffect(fecthApartments, [])
+     useEffect(fecthApartments, [id])
      // Utilisation de useEffect pour effectuer une requête de données au chargement du composant
      //useEffect avec une array vide exécute la fonction au chargement du composant
 
@@ -34,10 +34,10 @@ function Logement() {
       </div>
       <div className="logementInfoOWner">
         <div className="logementInfo">
-          <LogementInfo />
+          <LogementInfo title="titre" location="location" tags="[tag1]"/>
         </div>
         <div className="logementOwner">
-          <LogementOwner />
+          <LogementOwner name="nom" picture="" />
         </div>
       </div>
       <div className="logementBarInfo">

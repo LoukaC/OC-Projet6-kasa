@@ -2,14 +2,13 @@ import React from 'react'
 import './LogementOwner.scss'
 
 
-function LogementOwner() {
+function LogementOwner(props) {
   return (
     <div className="logementOwner">
       <div className="Owner">
-        <div className="nameOwner">nom</div>
+        <div className="nameOwner">{props.name}</div>
         <div className="pictureOwner">
-          picture
-          <img src="" alt="" />
+          <img src={props.picture} alt={props.name} />
         </div>
       </div>
       <div className="ratingOwner">
