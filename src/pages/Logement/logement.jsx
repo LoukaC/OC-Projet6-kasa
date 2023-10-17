@@ -7,7 +7,9 @@ import LogementInfo from '../../components/LogementInfo/LogementInfo'
 import LogementOwner from '../../components/LogementOwner/LogementOwner'
 
 function Logement() {
-  
+
+  const { id } = useParams()
+  console.log(id)
 
      const [apartments, setApartments] = useState([])
      // Utilisation de useState pour initialiser le state 'apartments' à un tableau vide
