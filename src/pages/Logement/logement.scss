@@ -10,9 +10,26 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+     
+         .tag{
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FF6060 ;
+            border-radius: 10px;
+            height: 25px;
+            width: 115px;
+            color: white;
+
+        }
+        
     
+        
     }
-    
+
+
     .logementBarInfo{
         display: flex;
         flex-direction: row;
@@ -23,6 +40,7 @@
         }
     
     }
+
 }
 
 

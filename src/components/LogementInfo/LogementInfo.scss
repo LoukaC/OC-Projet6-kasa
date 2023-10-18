@@ -1,5 +1,5 @@
 
-.logementInfo{
+.logementInformation{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,26 +12,21 @@
         justify-content: center;
         align-items: flex-start;
         gap: 0px;
-    }
 
-    .tags{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    
 
-        .tag{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-color: #FF6060 ;
-            border-radius: 10px;
-            height: 25px;
-            width: 115px;
-            color: white;
+        .logementTitle{
+            
+            h2{
+                margin: 0px;
+            }
         }
     }
 
+    .tagsBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
 }
 

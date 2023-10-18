@@ -8,8 +8,23 @@
 
     .Owner{
         display: flex;
-        flex-direction: row;
         gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+        .pictureOwner{
+            height: 64px;
+            width: 64px;
+            
+
+
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 32px;  
+            }
+        }
     }
 
 
@@ -17,5 +32,9 @@
         display: flex;
         flex-direction: row;
         gap:10px;
+
+        .starInactive{
+            color: #E3E3E3;
+        }
     }
 }

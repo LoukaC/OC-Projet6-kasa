@@ -14,7 +14,7 @@ function Logement() {
 
   useEffect(() => {
     // Utilise useEffect pour effectuer une requête de données au chargement du composant ou à chaque changement de l'ID
-    fetch('DataBase.json') // Utilise fetch pour récupérer les données à partir du fichier JSON
+    fetch('/DataBase.json') // Utilise fetch pour récupérer les données à partir du fichier JSON
       .then((res) => res.json())
       .then((data) => {
         const selectedApartment = data.find((apartment) => apartment.id === id) // Recherche l'appartement correspondant à l'ID dans les données récupérées
@@ -29,26 +29,42 @@ function Logement() {
         <Carrousel />
       </div>
       <div className="logementInfoOWner">
-        <div className="logementInfo">
-          <LogementInfo
-            title={apartment.title}
-            location="location"
-            tags="[tag1]"
-          />
-        </div>
-        <div className="logementOwner">
-          <LogementOwner name="nom" picture="" />
-        </div>
+        <LogementInfo
+          title={apartment.title}
+          location={apartment.location}
+          tags={
+            apartment.tags
+              ? apartment.tags.map((tag, index) => (
+                  <ul className="tag" key={index}>
+                    {tag}
+                  </ul>
+                ))
+              : 'Aucun tag'
+          }
+        />
+        <LogementOwner
+          name={apartment.host ? apartment.host.name : 'aucun nom'}
+          picture={apartment.host ? apartment.host.picture : 'aucune photo'}
+          nombreEtoiles={
+            apartment.rating ? apartment.rating : 'aucune rating'
+          }
+        />
       </div>
       <div className="logementBarInfo">
         <div className="barWidth">
-          <BarInfo
-            title="Description"
-            paragraph="zqsdqfdqfffqlllllllllllllllllllllllllllffqssfdfdsfdsf"
-          />
+          <BarInfo title="Description" paragraph={apartment.description} />
         </div>
         <div className="barWidth">
-          <BarInfo title="Equipements" paragraph="zqllffqssfdfdsfdsf" />
+          <BarInfo
+            title="Equipements"
+            paragraph={
+              apartment.equipments
+                ? apartment.equipments.map((equipment, index) => (
+                    <li key={index}>{equipment}</li>
+                  ))
+                : 'Aucun équipement disponible'
+            }
+          />
         </div>
       </div>
     </div>
