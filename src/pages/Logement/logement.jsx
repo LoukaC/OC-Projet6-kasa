@@ -25,9 +25,7 @@ function Logement() {
 
   return (
     <div className="logement">
-      <div>
-        <Carrousel />
-      </div>
+        <Carrousel title={apartment.title} imgUrl={apartment ? apartment.pictures : "aucunde photo"} />
       <div className="logementInfoOWner">
         <LogementInfo
           title={apartment.title}
@@ -45,9 +43,7 @@ function Logement() {
         <LogementOwner
           name={apartment.host ? apartment.host.name : 'aucun nom'}
           picture={apartment.host ? apartment.host.picture : 'aucune photo'}
-          nombreEtoiles={
-            apartment.rating ? apartment.rating : 'aucune rating'
-          }
+          nombreEtoiles={apartment.rating ? apartment.rating : 'aucune rating'}
         />
       </div>
       <div className="logementBarInfo">
