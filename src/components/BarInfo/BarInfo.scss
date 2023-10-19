@@ -11,8 +11,8 @@
         
         h2{
             font-weight: 500;
-            font-size: 18px;
-            line-height: 25.67px;
+            font-size: 24px;
+            line-height: 34.22px;
             margin: 20px;
         }
 
@@ -38,6 +38,7 @@
         line-height: 25.67px;
         max-height: 0;
         overflow: hidden;
+        margin: 0px 0px;
 
         &.expanded {
             max-height: 1000px; /* ou toute autre valeur appropriée */
@@ -46,4 +47,38 @@
         }
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    .barInfo{
+
+        .topBar{
+            height: 30px;
+            
+            h2{
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 18.54px;
+                margin: 10px;
+            }
+
+        }
+
+
+        p{
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 14px;
+            
+
+            &.expanded {
+                max-height: 1000px; /* ou toute autre valeur appropriée */
+                transition: max-height 2s ease; /* Ajout de la transition uniquement pour l'expansion */
+                padding: 5px;
+            }
+        }
+
+        
+
+    }
 }

@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
+    width: 100%;
 
     .logementTitreLocation{
         display: flex;
@@ -27,6 +28,38 @@
         flex-direction: row;
         justify-content: flex-start;
         gap: 10px;
+        font-size: 14px;
+        line-height: 19.96px;
+        font-weight: 500;
     }
 }
 
+@media screen and (max-width: 600px) {
+
+    .logementInformation{
+    gap: 10px;
+
+    .logementTitreLocation{
+        gap: 5px;
+
+        .logementTitle{
+            
+            h2{
+                font-size: 18px;
+                line-height: 25.67px;
+            }
+        }
+
+        .location{
+            font-size: 14px;
+            line-height: 19.96px;
+        }
+    }
+
+    .tagsBox{
+        font-size: 10px;
+        line-height: 14.26px;
+        gap: 10px;
+    }
+}
+}

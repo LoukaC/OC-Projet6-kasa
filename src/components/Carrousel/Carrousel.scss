@@ -39,3 +39,32 @@
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    
+    .carrousel{
+
+
+        img{
+            height: 255px;
+        
+        }
+
+        .fa-chevron-left{
+           font-size: 24px;
+           left: 10px;
+        }
+
+        .fa-chevron-right{
+           font-size: 24px;
+           right: 10px;
+        }
+
+
+        .count{
+        
+
+
+        }
+    }
+}

@@ -18,14 +18,12 @@
             justify-content: center;
             align-items: center;
             background-color: #FF6060 ;
-            border-radius: 10px;
+            border-radius: 5px;
             height: 25px;
-            width: 170px;
+            width: 150px;
             color: white;
 
         }
-        
-    
         
     }
 
@@ -43,4 +41,39 @@
 
 }
 
+@media screen and (max-width: 600px) {
+    
+    .logement{
+   
+    gap: 10px;
+    
+
+    .logementInfoOWner{
+       
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+     
+         .tag{
+            width: 84px;
+            height: 18px;
+        }
+        
+    }
+
+
+    .logementBarInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        .barWidth{
+            width: 100%;
+        }
+    
+    }
+
+}
+}
 

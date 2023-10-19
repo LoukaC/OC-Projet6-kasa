@@ -9,12 +9,30 @@
     align-items: center;
     color: white;
     border-radius: 20px;
+
 }
 
+ h1{
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 68.45px;
+    }
 
 
-h1{
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 68.45px;
+
+@media screen and (max-width: 550px) {
+
+   .banner{
+        height: 111px;
+        justify-content: flex-start;
+    
+    }
+        h1{
+        margin-left: 20px;
+        width: 217px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
 }

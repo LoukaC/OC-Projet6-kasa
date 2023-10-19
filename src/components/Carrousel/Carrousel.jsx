@@ -35,12 +35,16 @@ function Carrousel(props) {
         // Affichage d'un message s'il n'y a pas d'image à afficher
         <p>pas d'image</p>
       )}
-        {/* Ajout d'un bouton pour afficher l'image précédente au clic */}
+
+      {props.imgUrl && props.imgUrl.length > 1 && (
+        <div className='chevrons'>
         <i className="fa-solid fa-chevron-left fa-5x" onClick={handlePrev}></i>
-        {/* Ajout d'un bouton pour afficher l'image suivante au clic */}
         <i className="fa-solid fa-chevron-right fa-5x" onClick={handleNext}></i>
+        </div>
+      )}
+
       {/* Affichage du compteur indiquant l'index actuel de l'image par rapport au nombre total d'images */}
-      {props.imgUrl && props.imgUrl.length > 0 && (
+      {props.imgUrl && props.imgUrl.length > 1 && (
         <div className="count">{`${currentIndex + 1}/${
           props.imgUrl.length
         }`}</div>

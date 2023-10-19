@@ -10,3 +10,12 @@
     color: white;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .bannerApropos{
+    height: 111px;
+    
+}
+
+}

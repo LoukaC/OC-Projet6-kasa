@@ -25,11 +25,12 @@ function Gallery() {
     <div className="gallery">
       {apartments.map((apartment) => (
         <Appartment
+          key={apartment.id} // Ajoutez une clé unique pour chaque appartement
           title={apartment.title}
           image={apartment.cover}
           id={apartment.id}
         />
-      ))}
+      ))} 
     </div>
   )
 }

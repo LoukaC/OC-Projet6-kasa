@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './logement.scss'
 import Carrousel from '../../components/Carrousel/Carrousel'
 import BarInfo from '../../components/BarInfo/BarInfo'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import LogementInfo from '../../components/LogementInfo/LogementInfo'
 import LogementOwner from '../../components/LogementOwner/LogementOwner'
 
@@ -10,6 +10,7 @@ import LogementOwner from '../../components/LogementOwner/LogementOwner'
 function Logement() {
   const { id } = useParams() // Récupère l'ID de l'appartement à partir des paramètres d'URL
   console.log(id)
+
   const [apartment, setApartment] = useState({}) // Déclare l'état pour stocker les informations de l'appartement
 
   useEffect(() => {
@@ -23,9 +24,19 @@ function Logement() {
       .catch((error) => console.error('Error fetch:', error))
   }, [id]) // Utilise l'ID comme dépendance pour que useEffect se déclenche à chaque changement de l'ID
 
+
+  // Condition pour vérifier si l'ID existe et redirection page d'erreur
+  if (!apartment) {
+    return <Navigate to="/error" />
+  }
+
+
   return (
     <div className="logement">
-        <Carrousel title={apartment.title} imgUrl={apartment ? apartment.pictures : "aucunde photo"} />
+      <Carrousel
+        title={apartment.title}
+        imgUrl={apartment ? apartment.pictures : 'aucunde photo'}
+      />
       <div className="logementInfoOWner">
         <LogementInfo
           title={apartment.title}

@@ -5,12 +5,16 @@
     justify-content: center;
     align-items: flex-end;
     gap: 20px;
+    width: 100%;
 
     .Owner{
         display: flex;
         gap: 10px;
         justify-content: center;
         align-items: center;
+        font-size: 18px;
+        line-height: 25.67px;
+        font-weight: 500;
 
         .pictureOwner{
             height: 64px;
@@ -32,9 +36,46 @@
         display: flex;
         flex-direction: row;
         gap:10px;
+        font-size: 24px;
 
         .starInactive{
             color: #E3E3E3;
         }
     }
+}
+
+@media screen and (max-width: 600px) {
+
+        .logementOwner{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between ;
+            align-items: center;
+
+        .Owner{
+            gap: 5px;
+            font-size: 12px;
+            line-height: 17.11px;
+
+            .pictureOwner{
+                height: 32px;
+                width: 32px;
+                
+                img{
+                    border-radius: 16px;  
+                }
+            }
+        }
+
+
+        .ratingOwner{
+            gap: 5px;
+            font-size: 13px;
+
+            .starInactive{
+                color: #E3E3E3;
+            }
+        }
+    }
+
 }
