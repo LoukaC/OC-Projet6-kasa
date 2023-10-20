@@ -17,8 +17,7 @@
             position: absolute;
             top: 50%; /* Positionnement au milieu verticalement */
             transform: translateY(-50%); /* Ajustement pour le centrage vertical exact */
-            
-    
+            cursor: pointer;
         }
 
         .fa-chevron-right{
@@ -26,7 +25,7 @@
             position: absolute;
             top: 50%; /* Positionnement au milieu verticalement */
             transform: translateY(-50%); /* Ajustement pour le centrage vertical exact */
-            
+            cursor: pointer;
         }
 
     
