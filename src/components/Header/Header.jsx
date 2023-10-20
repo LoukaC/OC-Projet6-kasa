@@ -11,7 +11,7 @@ function Header() {
             <img
               src="/images/logo-kasa-rose.png"
               alt="logo Kasa"
-              srcSet="/images/logo-kasa-rose-responsive.png, 600w"
+              srcSet="/images/logo-kasa-rose-responsive.png 600w"
             />
           </div>
         </NavLink>

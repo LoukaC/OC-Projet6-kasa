@@ -21,6 +21,10 @@
          font-size: 24px;
          line-height: 34.22px;
          margin: 0px;
+
+           br {
+            display: none; // Ajout de la propriété pour ignorer la balise <br> dans le CSS
+        }
       }
 }
 
@@ -41,7 +45,12 @@
       p{
          font-size: 12px;
          line-height: 17.11px;
-         width: 100px
+         width: 100px;
+         text-align: center;
+
+         br {
+                display:block;
+            }
       }
    }
 
