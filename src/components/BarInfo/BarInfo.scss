@@ -43,7 +43,7 @@
 
         &.expanded {
             max-height: 1000px; /* ou toute autre valeur appropriée */
-            transition: max-height 2s ease; /* Ajout de la transition uniquement pour l'expansion */
+            transition: max-height 4s ease; /* Ajout de la transition uniquement pour l'expansion */
             padding: 10px;
         }
     }
