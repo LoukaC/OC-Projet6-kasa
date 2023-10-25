@@ -18,18 +18,18 @@
         }
 
         .chevronUp{
-            display: none;
+            transition: transform 0.5s;
+            font-size: 20px;
          }
 
-        .chevronDown{
-            display: block;
+        .rotated {
+            transform: rotate(-180deg);
         }
 
         i{
             margin: 20px;
         }
     }
-
 
     p{
         background-color: #F6F6F6;
@@ -40,11 +40,14 @@
         max-height: 0;
         overflow: hidden;
         margin: 0px 0px;
+        opacity: 0;
+        transform: scaleY(0);
+        transition: max-height 2s linear, transform 2s linear, opacity 2s linear;
 
         &.expanded {
-            max-height: 1000px; /* ou toute autre valeur appropriée */
-            transition: max-height 4s ease; /* Ajout de la transition uniquement pour l'expansion */
-            padding: 10px;
+            max-height: 1000px;
+             transform: translateY(0);
+             opacity: 1;
         }
     }
 

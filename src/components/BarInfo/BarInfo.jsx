@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './BarInfo.scss';
+import React, { useState } from 'react'
+import './BarInfo.scss'
 
 function BarInfo(props) {
   // Utilisation de useState pour gérer l'état de l'expansion
@@ -10,27 +10,17 @@ function BarInfo(props) {
     setIsExpanded(!isExpanded)
   }
 
-  return (
-    <div className="barInfo">
-      {/* Barre supérieure avec le titre et les icônes de chevron */}
-      <div className="topBar" onClick={toggleExpand}>
-        <h2>{props.title}</h2> {/* Utilisation de la prop 'title' pour le titre */}
-        <div className={isExpanded ? 'chevronUp' : 'chevronDown'}>
-          <i className="fa-solid fa-chevron-up"></i>
-        </div>
-        <div className={isExpanded ? 'chevronDown' : 'chevronUp'}>
-          <i className="fa-solid fa-chevron-down"></i>
-        </div>
+return (
+  <div className="barInfo">
+    <div className="topBar" onClick={toggleExpand}>
+      <h2>{props.title}</h2>{' '}
+      <div className={isExpanded ? 'chevronUp rotated' : 'chevronUp'}>
+        <i className="fa-solid fa-chevron-up"></i>
       </div>
-      {/* Paragraphe affiché si isExpanded est vrai */}
-        <p className={isExpanded ? 'expanded' : ''}>{props.paragraph}</p>
-        {/* Utilisation de la prop 'paragraph' pour le contenu du paragraphe */}
     </div>
-  )
+    <p className={isExpanded ? 'expanded' : ''}>{props.paragraph}</p>
+  </div>
+)
 }
 
-export default BarInfo;
-
-
-
-
+export default BarInfo

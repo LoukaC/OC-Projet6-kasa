@@ -1,11 +1,16 @@
-import BannerApropos from "../../components/BannerApropos/BannerApropos"
+import Banner from "../../components/Banner/Banner"
 import BarInfo from "../../components/BarInfo/BarInfo"
 import './Apropos.scss'
+import BackGroundImage from '../../images/bannerApropos.png'
 
 function APropos() {
   return (
     <div className="Apropos">
-      <BannerApropos />
+      <Banner
+        backgroundUrl={BackGroundImage}
+        title=""
+        linearGradient="linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0))"
+      />
       <div className="AproposBox">
         <BarInfo
           title="Fiabilité"

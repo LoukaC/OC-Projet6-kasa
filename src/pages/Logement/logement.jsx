@@ -9,7 +9,6 @@ import LogementOwner from '../../components/LogementOwner/LogementOwner'
 
 function Logement() {
   const { id } = useParams() // Récupère l'ID de l'appartement à partir des paramètres d'URL
-  console.log(id)
 
   const [apartment, setApartment] = useState({}) // Déclare l'état pour stocker les informations de l'appartement
 
