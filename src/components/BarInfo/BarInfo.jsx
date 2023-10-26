@@ -10,15 +10,18 @@ function BarInfo(props) {
     setIsExpanded(!isExpanded)
   }
 
+
 return (
-  <div className="barInfo">
+  <div className=' barInfo'>
     <div className="topBar" onClick={toggleExpand}>
-      <h2>{props.title}</h2>{' '}
+      <h2>{props.title}</h2>
       <div className={isExpanded ? 'chevronUp rotated' : 'chevronUp'}>
         <i className="fa-solid fa-chevron-up"></i>
       </div>
     </div>
-    <p className={isExpanded ? 'expanded' : ''}>{props.paragraph}</p>
+    <p className={(isExpanded ? 'visible' : 'hidden') + ' description_content'}>
+      {props.paragraph}
+    </p>
   </div>
 )
 }

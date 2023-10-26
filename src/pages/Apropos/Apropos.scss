@@ -1,13 +1,12 @@
 .Apropos{
-   margin: 40px;
+   margin: 40px 40px 40px 40px;
 }
 
 .AproposBox{
-   margin: 30px 80px;
+   margin: 30px 80px 30px 80px;
    display: flex;
    flex-direction: column;
-   gap: 30px;
-
+   gap: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -18,7 +17,7 @@
 
    .AproposBox{
       margin: 20px 0px;
-      gap: 20px;
+      gap: 5px;
 
    }
 

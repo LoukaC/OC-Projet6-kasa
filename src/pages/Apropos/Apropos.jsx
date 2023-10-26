@@ -22,7 +22,7 @@ function APropos() {
         />
         <BarInfo
           title="Service"
-          paragraph="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
+          paragraph="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         />
         <BarInfo
           title="Sécurité"

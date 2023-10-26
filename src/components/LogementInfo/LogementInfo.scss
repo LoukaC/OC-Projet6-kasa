@@ -25,8 +25,9 @@
 
     .tagsBox{
         display: flex;
-        flex-direction: row;
+        flex-direction:row;
         justify-content: flex-start;
+        flex-wrap: wrap;
         gap: 10px;
         font-size: 14px;
         line-height: 19.96px;
